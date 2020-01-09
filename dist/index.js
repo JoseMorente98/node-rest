@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bodyParser = require("body-parser");
 var server_1 = __importDefault(require("./server/server"));
 var hola_router_1 = __importDefault(require("./router/hola.router"));
-var server = server_1.default.init(3000);
+var port = parseInt(process.env.PORT, 10) || 3000;
+var server = server_1.default.init(port);
 var api = "/api/";
 //MySQL.getInstance();
 /**

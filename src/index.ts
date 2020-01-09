@@ -14,8 +14,9 @@ import ticket from "./router/ticket.router";
 import actividad from "./router/actividad.router";
 import evaluacion from "./router/evaluacion.router";
 import saludar from "./router/hola.router";
+const port: number = parseInt(<string>process.env.PORT, 10) || 3000
 
-const server = Server.init(3000);
+const server = Server.init(port);
 const api:string = "/api/"
 
 //MySQL.getInstance();
